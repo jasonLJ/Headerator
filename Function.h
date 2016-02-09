@@ -22,9 +22,9 @@ namespace HeaderatorEngine
 
 		vector<string> GetLines();
 
-		string GetName();
-
 		vector<string> GetArguments();
+
+		string GetName();
 
 		string GetIdentifier(bool include_return_type = true, bool include_arguments = true);
 

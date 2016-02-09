@@ -12,6 +12,7 @@ using namespace HeaderatorEngine;
 File::File(string file_name)
 {
 	this->file_name_ = file_name;
+	cout << file_name << "lKLKL";
 }
 
 File::File(string file_name, vector<string> lines)
@@ -34,29 +35,29 @@ vector<string> File::GetLines()
 
 string File::GetLine(int line_number)
 {
-
+	return lines_.at(line_number);
 }
 
 int File::GetLineCount()
 {
-
+	return 0;
 }
 
 /* Setters */
 
 void File::SetName(string file_name)
 {
-
+	file_name_ = file_name;
 }
 
 void File::SetLines(vector<string> lines)
 {
-
+	lines_ = lines;
 }
 
 void File::SetLine(string line, int line_number)
 {
-
+	lines_.at(line_number) = line;
 }
 
 /* File Reading */
@@ -70,6 +71,7 @@ void File::ReadFile(string file_name)
 {
 	ifstream file_stream(file_name);
 	ReadFile(file_stream);
+	file_stream.close();
 }
 
 void File::ReadFile(ifstream& file_stream)

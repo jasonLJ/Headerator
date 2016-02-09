@@ -65,15 +65,15 @@ vector<string> Function::GetArguments()
 
 string Function::GetName()
 {
-
+	return "";
 }
 
 string Function::GetIdentifier(bool include_return_type, bool include_arguments)
 {
-
+	return "";
 }
 
 int Function::GetLineCount()
 {
-
+	return 0;
 }
